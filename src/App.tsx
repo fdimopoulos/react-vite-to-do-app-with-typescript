@@ -64,6 +64,10 @@ function App() {
         setTodos(updatedTodos);
     };
 
+    const clearAll = () => {
+        setTodos([]);
+    };
+
     return (
         <div className="app">
             <h1>To-Do List App</h1>
@@ -96,6 +100,9 @@ function App() {
                         </div>
                     </div>
                 ))}
+                {todos.length > 1 && (
+                    <button onClick={clearAll}>Clear All</button>
+                )}
             </form>
         </div>
     );
