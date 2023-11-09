@@ -101,7 +101,9 @@ function App() {
                     </div>
                 ))}
                 {todos.length > 1 && (
-                    <button onClick={clearAll}>Clear All</button>
+                    <button className="btn-clear" onClick={clearAll}>
+                        Clear All
+                    </button>
                 )}
             </form>
         </div>
